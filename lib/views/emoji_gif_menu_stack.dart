@@ -83,7 +83,7 @@ class EmojiGifMenuStack extends StatelessWidget {
   }
 
   void updateKeyboardStatus(ScreenHeight screenHeight) {
-    if (!GetInstance().isRegistered<KeyboardController>()) {
+    if (!Get.isRegistered<KeyboardController>()) {
       Get.put(KeyboardController());
     }
     Get.find<KeyboardController>().updateKeyboardStatus(

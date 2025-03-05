@@ -98,7 +98,7 @@ class MenuStateController extends GetxController {
   bool canPop() {
     print("currentMenuCanpop:$currentMenu");
     if (currentMenu != null) {
-      if (GetInstance().isRegistered<MobileSearchBarController>() &&
+      if (Get.isRegistered<MobileSearchBarController>() &&
           Get.find<MobileSearchBarController>().viewMobileSearchBar) {
         return false;
       } else {
@@ -112,7 +112,7 @@ class MenuStateController extends GetxController {
   void onPopInvoked(BuildContext context) {
     print("onPopInvoked");
     if (currentMenu != null) {
-      if (GetInstance().isRegistered<MobileSearchBarController>() &&
+      if (Get.isRegistered<MobileSearchBarController>() &&
           Get.find<MobileSearchBarController>().viewMobileSearchBar) {
         Get.find<MobileSearchBarController>().close();
         update();
@@ -128,7 +128,7 @@ class MenuStateController extends GetxController {
 
   bool onWillPop() {
     if (currentMenu != null) {
-      if (GetInstance().isRegistered<MobileSearchBarController>() &&
+      if (Get.isRegistered<MobileSearchBarController>() &&
           Get.find<MobileSearchBarController>().viewMobileSearchBar) {
         Get.find<MobileSearchBarController>().close();
         update();
